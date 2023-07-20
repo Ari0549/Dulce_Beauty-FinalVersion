@@ -11,32 +11,46 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
-export default class Home extends Component {
-    render() {
-        return (
-            <div>
-                <Container>
-                    <figure className='position-relative'>
-                        <img src={homeImge} alt='homeImg' className='img-fluid'/>
-                        <figcaption>
-                            <div className='text1'>
-                                The Dulce Beauty Clinic
-                            </div>
-                            <div className='text2'>
-                                Beauty Is Our Duty
-                            </div>
-                            <Link 
-                                className="btn btn-lg"
-                                role="button"
-                                to="/services"
-                                > 
-                                Book now
-                            </Link>
-                        </figcaption>
-                    </figure>
-                </Container>
-            </div>
-        )
-    }
+
+function Home() {
+
+    const { t, i18n } = useTranslation();
+    
+    return (
+        <div>
+            <Container>
+                <figure className='position-relative'>
+                    <img src={homeImge} alt='homeImg' className='img-fluid'/>
+                    <figcaption>
+                        <div className='text1'>
+                            {t('home_title')}
+                        </div>
+                        <div className='text2'>
+                            Beauty Is Our Duty
+                        </div>
+                        <Link 
+                            className="btn btn-lg"
+                            role="button"
+                            to="/Book"
+                            > 
+                            Book now
+                        </Link>
+                    </figcaption>
+                </figure>
+
+                <h1 className='newClient'>New here?</h1>
+                    <h4 className='newClient2'>Take a look at the services our clinic offers</h4>
+                    <Link 
+                        className="btn btn-outline-light btn-lg"
+                        role="button"
+                        to="/services"
+                    > 
+                        Services
+                    </Link>
+            </Container>
+        </div>
+    )
 }
+export default Home;

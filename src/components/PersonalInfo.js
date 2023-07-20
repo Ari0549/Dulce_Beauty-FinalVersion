@@ -4,6 +4,7 @@ export const PersonalInfo = [
     {
         section: 1,
         items: [
+
             {
                 label: 'First name',
                 type: 'text',

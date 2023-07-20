@@ -1,0 +1,23 @@
+{
+    "translation":{
+        "nav_about": "À PROPOS",
+        "nav_services": "SERVICES",
+        "nav_langage": "EN",
+        "nav_book": "Réserver",
+        "home_title": "La clinique Dulce Beauty",
+        "about_titre": "À PROPOS",
+        "about_dulce": "Clinique Dulce Beauty",
+        "about_text1": "Chez notre clinique, nous avons une équipe d'experts qualifiés qui travaillent dans l'industrie de la beauté depuis plusieurs années.",
+        "about_text2": "La clinique Dulce Beauty vous propose un large choix de services haut de gamme.",
+        "about_text3": "Nous priorisons le confort et la satisfaction de nos clients.",
+        "about_experts": "NOS EXPERTS",
+        "about_facial": "Expert en soins du visage",
+        "about_body" : "Expert en soins corporels",
+        "about_esthetic": "Experte en esthétique",
+        "about_reviews": "COMMENTAIRES",
+        "about_addReviews": "AJOUTER UN COMMENTAIRE",
+        "about_name": "Nom",
+        "about_comment": "Laisser un commentaire ici",
+        "about_submit": "Soumettre"
+    }
+}

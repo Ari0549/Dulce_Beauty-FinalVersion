@@ -1,0 +1,23 @@
+{
+    "translation":{
+        "nav_about": "ABOUT",
+        "nav_services": "SERVICES",
+        "nav_langage": "FR",
+        "nav_book": "Book",
+        "home_title": "The Dulce Beauty Clinic",
+        "about_titre": "ABOUT US",
+        "about_dulce": "Dulce Beauty Clinic",
+        "about_text1": "At our clinic, we have a team of qualified experts who have been in the beauty industry for several years.",
+        "about_text2": "The Dulce Beauty clinic offers you a wide choice of high-end services.",
+        "about_text3": "We prioritize the comfort and the satisfaction of our customers.",
+        "about_experts": "OUR EXPERTS",
+        "about_facial" : "Facial Treatment Expert",
+        "about_body" : "Body Treatment Expert",
+        "about_esthetic": "Esthetic Expert",
+        "about_reviews": "REVIEWS",
+        "about_addReviews": "ADD A REVIEW",
+        "about_name": "Name",
+        "about_comment": "Leave a review here",
+        "about_submit": "Submit"
+    }
+}

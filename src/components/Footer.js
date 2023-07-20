@@ -1,6 +1,11 @@
 import './styles.css';
 import Container from 'react-bootstrap/Container';
+import insta from './instagram.png';
+import face from './facebook.png';
+import { useTranslation } from 'react-i18next';
 const Footer = () => {
+
+    const { t, i18n } = useTranslation();
 
     return (
         <div className='footer'>
@@ -36,13 +41,8 @@ const Footer = () => {
                     Saturday and Sunday: closed
                     </p>
 
-                    <p style={{
-                        marginTop: '10px',
-                        marginLeft: '205px',
-                    }}>Instagram
-                    <br />
-                    Facebook
-                    </p>
+                    <img src={insta} style={{ marginTop:'20px', marginLeft: '200px', width: '60px', height: '60px'}}className='img-fluid'/>
+                    <img src={face} style={{ marginTop:'20px', marginLeft: '20px', width: '60px', height: '60px'}}className='img-fluid'/>
                 </div>
             </Container>
         </div>
