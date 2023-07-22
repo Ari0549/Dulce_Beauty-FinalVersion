@@ -10,15 +10,22 @@ import {
     Route,
     Link
 } from "react-router-dom";
+
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+
 export const FormItem = ({ item, onChange, answer }) => {
     const [currentValue, setCurrentValue] = useState(answer || null);
+    //const [startDate, setStartDate] = useState(new Date());
+    const [date, setDate] = useState(new Date());
     switch (item.type) {
-        case 'text':
+        case 'first':
         return(
             <>
                 <Form.Label>{item.label}</Form.Label>
                 <Form.Control
-                    type="text"
+                    type="first"
                     id={item.label}
                     onChange={(e) => onChange(e.target.value, item.value)}
                     value={currentValue}
@@ -26,7 +33,56 @@ export const FormItem = ({ item, onChange, answer }) => {
             </>
         )
         break;
-        case 'select':
+        case 'last':
+            return(
+                <>
+                    <Form.Label>{item.label}</Form.Label>
+                    <Form.Control
+                        type="last"
+                        id={item.label}
+                        onChange={(e) => onChange(e.target.value, item.value)}
+                        value={currentValue}
+                    />
+                </>
+            )
+            break;
+        case 'address':
+            return(
+                <>
+                    <Form.Label>{item.label}</Form.Label>
+                    <Form.Control
+                        type="address"
+                        id={item.label}
+                        onChange={(e) => onChange(e.target.value, item.value)}
+                        value={currentValue}
+                    />
+                </>
+            )
+            break;
+        case 'phone':
+            return(
+                <>
+                    <Form.Label>{item.label}</Form.Label>
+                    <Form.Control
+                        type="phone"
+                        id={item.label}
+                        onChange={(e) => onChange(e.target.value, item.value)}
+                        value={currentValue}
+                    />
+                </>
+            )
+        break;
+        case 'pickDate':
+            return(
+                <>
+                    <Form.Label>{item.label}</Form.Label>
+                    <div className="date-picker-wrapper">
+                        <DatePicker className='date-pick' style={{width: '1000px'}} selected={date} onChange={(date) => setDate(date)} />
+                    </div>
+                </>
+            )
+        break;
+    case 'selectexp':
         return(
             <div className='mt-2'>
                 <Form.Label>{item.label}</Form.Label>
@@ -43,6 +99,41 @@ export const FormItem = ({ item, onChange, answer }) => {
             </div>
         )
         break;
+    case 'selectserv':
+        return(
+            <div className='mt-2'>
+                <Form.Label>{item.label}</Form.Label>
+                <Form.Select aria-label={item.label} value={currentValue} onChange={(e) => onChange(e.target.value, item.value)}>
+                    <option>Open this select list</option>
+                    {
+                        item.options.map((opt, index) => {
+                            return (
+                                <option value={opt}>{opt}</option>
+                            )
+                        })
+                    }
+                </Form.Select>
+            </div>
+        )
+        break;
+            case 'selecttime':
+                return(
+                    <div className='mt-2'>
+                        <Form.Label>{item.label}</Form.Label>
+                        <Form.Select aria-label={item.label} value={currentValue} onChange={(e) => onChange(e.target.value, item.value)}>
+                            <option>Open this select list</option>
+                            {
+                                item.options.map((opt, index) => {
+                                    return (
+                                        <option value={opt}>{opt}</option>
+                                    )
+                                })
+                            }
+                        </Form.Select>
+                    </div>
+                )
+                break;
+
         case 'information':
         return(
             <div className='BookingFin'>

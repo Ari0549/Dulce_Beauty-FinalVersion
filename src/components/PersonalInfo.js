@@ -7,22 +7,22 @@ export const PersonalInfo = [
 
             {
                 label: 'First name',
-                type: 'text',
+                type: 'first',
                 value: 'first',
             },
             {
                 label: 'Last name',
-                type: 'text',
+                type: 'last',
                 value: 'last',
             },
             {
                 label: 'Email address',
-                type: 'text',
+                type: 'address',
                 value: 'email',
             },
             {
                 label: 'Phone number',
-                type: 'text',
+                type: 'phone',
                 value: 'phone',
             }
         ]
@@ -34,20 +34,26 @@ export const PersonalInfo = [
             {
                 
                 label: 'Expert',
-                type: 'select',
+                type: 'selectexp',
                 options: ['John Doe', 'Jane Doe', 'Sofia Hayes'],
                 value: 'expert',
             },
             {
                 label: 'Service',
-                type: 'select',
+                type: 'selectserv',
                 options: ['Himalayan Salt Treatment', 'Detox and cellulite treatment', 'Foot care', 'Cleansing Facial', 'Facial Gua Sha', 'Anti-aging facial treatment', 'Keratin Treatment', 'Lashes and brows', 'Laser Hair Removal'],
                 value: 'service',
             },
             {
                 label: 'Date and time',
-                type: 'text',
+                type: 'pickDate',
                 value: 'date',
+            },
+            {
+                label: 'Time',
+                type: 'selecttime',
+                options: ['9h30 a.m.', '10h00 a.m.', '10h30 a.m.', '11h00 a.m.', '11h30 a.m.', '12h00 p.m.', '12h30 p.m.', '01h00 p.m.', '01h30 p.m.', '02h00 p.m.', '02h30 p.m.', '03h00 p.m.', '03h30 p.m.', '04h00 p.m.'],
+                value: 'time',
             }
         ]
     },
