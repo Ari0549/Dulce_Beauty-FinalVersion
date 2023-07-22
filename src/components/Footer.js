@@ -17,28 +17,28 @@ const Footer = () => {
                     }}>Clinic</h1>
                     <h1 style={{
                         marginTop: '50px',
-                    }}>Social Media</h1>
+                    }}>{t('footer_1')}</h1>
                 </div>
                 <div className='textFooter2'>
                     <p style={{
                         textAlign: 'left',
                         marginTop: '10px',
                         marginRight: '100px',
-                    }}>Call or text at
+                    }}>{t('footer_2')}
                     <br />
                     (999) 999-9999
                     <br />
-                    937 MacLaren Street, Ottawa, K1P 5M7
+                    {t('footer_3')}
                     </p>
 
                     <p style={{
                         textAlign: 'left',
                         marginTop: '10px',
-                    }}>Opening time:
+                    }}>{t('footer_4')}
                     <br />
-                    Monday to Friday: 9 a.m. to 5 p.m.
+                    {t('footer_5')}
                     <br />
-                    Saturday and Sunday: closed
+                    {t('footer_6')}
                     </p>
 
                     <img src={insta} style={{ marginTop:'20px', marginLeft: '200px', width: '60px', height: '60px'}}className='img-fluid'/>

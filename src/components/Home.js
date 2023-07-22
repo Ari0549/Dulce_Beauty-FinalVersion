@@ -28,20 +28,20 @@ function Home() {
                             {t('home_title')}
                         </div>
                         <div className='text2'>
-                            Beauty Is Our Duty
+                            {t('home_text1')}
                         </div>
                         <Link 
                             className="btn btn-lg"
                             role="button"
                             to="/Book"
                             > 
-                            Book now
+                            {t('home_book')}
                         </Link>
                     </figcaption>
                 </figure>
 
-                <h1 className='newClient'>New here?</h1>
-                    <h4 className='newClient2'>Take a look at the services our clinic offers</h4>
+                <h1 className='newClient'>{t('home_text2')}</h1>
+                    <h4 className='newClient2'>{t('home_text3')}</h4>
                     <Link 
                         className="btn btn-outline-light btn-lg"
                         role="button"

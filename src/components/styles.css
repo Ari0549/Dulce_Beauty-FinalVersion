@@ -35,8 +35,11 @@
     background-color: cutom-color;
     border-color: #5D4F85;
     border-color: cutom-cor;
-    border-radius: 12px;
+    border-radius: 8px;
     width: 100px;
+    font-family: 'Ledger', serif;
+    font-family: 'Ledger', serif;
+
 }
 
 .btn-primary:hover{
@@ -45,7 +48,8 @@
     background-color: cutom-color;
     border-color: #5D4F85;
     border-color: cutom-cor;
-    border-radius: 12px;
+    border-radius: 8px;
+    font-family: 'Ledger', serif;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -180,12 +184,14 @@ figcaption {
   color: #5D4F85;
   background-color: #ffffffb2;
   border-width: 2px;
+  font-family: 'Ledger', serif;
 }
 .btn-lg:hover{
   color: #ffffff;
   background-color: #9bb5a6;
   border-color: #9bb5a6;
   border-radius: 8px;
+  font-family: 'Ledger', serif;
 }
 
 .addingReview{
@@ -261,6 +267,7 @@ figcaption {
 .previousBtn:disabled{
   background-color: #d7d7d7;
   border: #d7d7d7;
+  font-family: 'Ledger', serif;
 }
 
 .titreInstruct1{
@@ -301,4 +308,21 @@ figcaption {
 .newClient2{
   font-family: 'Ledger', serif;
   margin-bottom: 30px;
+}
+
+input[type=checkbox] {
+
+  &:checked{
+    background-color: #5D4F85;
+    border-color: #5D4F85;
+  }
+
+  &:focus{
+    border-color: #5D4F85;
+  }
+}
+
+.facetCont{
+  border-radius: 5px;
+  border-color: #5D4F85;
 }

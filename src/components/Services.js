@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Accordion from 'react-bootstrap/Accordion';
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; 
@@ -9,141 +8,98 @@ import Card from 'react-bootstrap/Card';
 import imageExpert1 from './imgExpert1.png';
 import Collapse from 'react-bootstrap/Collapse';
 
-const Services = () => {
 
-    const [typeServiceF, settypeServiceF] = useState(false);
-    const [open, setOpen] = useState(false);
+//nouveau ajouté
+import { data } from "./serv_data";
+import TypeServ from "./TypeService";
+import CardGroup from 'react-bootstrap/CardGroup';
+import Facets_container from './Facets_container';
+//import Heuristics from './heuristics';
 
-    const handletypeServiceFChange = (e) => {
-        //settypeServiceF(!typeServiceF)
-        settypeServiceF(e.target.value);
-    };
+function Services(){
 
-    const [priceF, setPriceF] = useState(false);
+    const build_categorical_facet_values = (name) => {
+        const values = [... new Set(data.map(item => item[name]))]
+        return values.map(value => ({ 'name': value, 'checked': false }))
+    }
 
-    const handlepriceFChange = (e) => {
-        //setPriceF(!priceF)
-        setPriceF(e.target.value);
-    };
-
-    const [timeF, settimeF] = useState(false);
-
-    const handletimeFChange = (e) => {
-        //settimeF(!timeF)
-        settimeF(e.target.value);
-    };
-
-    const tpServ = 
-    [
-        { type: 'Body Treatment', price: '175$', time: '75 minutes', name: 'Himalayan Salt Treatment'},
-        { type: 'Body Treatment', price: '130$', time: '60 minutes', name: 'Detox And Cellulite Treatment'},
-        { type: 'Body Treatment', price: '100$', time: '50 minutes', name: 'Foot Care'},
-        { type: 'Facial Treatment', price: '175$', time: '60 minutes', name: 'Cleansing Facial'},
-        { type: 'Facial Treatment', price: '130$', time: '75 minutes', name: 'Facial Gua Sha'},
-        { type: 'Facial Treatment', price: '100$', time: '40 minutes',  name: 'Anti-Aging Facial Treatment'},
-        { type: 'Esthetic', price: '175$', time: '75 minutes', name: 'Keratin Treatment'},
-        { type: 'Esthetic', price: '130$', time: '75 minutes', name: 'Lashes And Brows'},
-        { type: 'Esthetic', price: '100$', time: '60 minutes', name: 'Laser Hair Removal'}
-    ];
-
-    const serviceFilt = tpServ.filter((item) => {
-        if (typeServiceF && item.type !== typeServiceF) {
-          return false;
+    //Initial state
+    const [state, setState] = useState({
+        //all_clothes: data,
+        //shown_clothes: data,
+        all_services: data,
+        shown_services: data,
+        facets: {
+            // PAS BESOIN DE COLOR
+            category: build_categorical_facet_values('category'),
+            price: build_categorical_facet_values('price'),
+            time: build_categorical_facet_values('time')
         }
-        if (priceF && item.price !== priceF) {
-          return false;
+    })
+
+    //Updates state.shown_clothes whenever state.facets changes
+    useEffect(() =>{
+        const facets = {}
+        // Get all the facet values that are true/active/selected.
+        Object.entries(state.facets).forEach(([name, values]) => {
+            facets[name] = []
+            values.forEach(value => {
+                if (value.checked) {
+                    facets[name].push(value.name)
+                }
+            })
+        })
+
+        // If there are no facets selected, show all services
+        if (Object.values(facets).every(arr => arr.length === 0)){
+            setState({ ...state, shown_services: state.all_services})
+            return
         }
-        if (timeF && item.time !== timeF) {
-          return false;
-        }
-        return true;
-    });
+
+        // Getting the number of active facet (Not facet_values)
+        const number_of_active_facets = Object.values(facets).filter(x => x.length).length
+
+        // Double loop through all services and all active facets
+        // Keep only the services that match the active facets
+        const to_show = state.all_services.map(serv =>
+            Object.entries(facets).map(([name, values]) =>
+            values.includes(serv[name])).filter(Boolean).length == number_of_active_facets ? serv : undefined
+        ).filter(Boolean)
+
+        setState({ ...state, shown_services: to_show})
+    }, [state.facets])
+
+    function clearAllFacetValues(facet) {
+        const new_facet = state.facets[facet].map(facet_value => ({
+            ...facet_value, checked: false
+        }))
+        setState({ ...state, facets: { ...state.facets, [facet]: new_facet }})
+    }
+
+    // Function to pass down to the Facet_value component to modify the state in this component.
+    function updateCategory(facet, value, newChecked) {
+        const new_facet = state.facets[facet].map(({ name, checked }) => ({ name: name, checked: name == value ? newChecked : checked}))
+        setState({ ...state, facets: { ...state.facets, [facet]: new_facet } })
+    }
 
     return (
         <div>
-            <h1 className='titlePages'>Services</h1>
-                <div className='serv' style={{display: 'flex', marginTop: '150px'}}>
-                    <div style={{marginLeft: '80px'}}>
-                    <Form.Select className='optionsServ' aria-label="Default select example" value={typeServiceF} onChange={handletypeServiceFChange}>
-                        <option value="">All types of services</option>
-                        <option value="Body Treatment">Body Treatment</option>
-                        <option value="Facial Treatment">Facial Treatment</option>
-                        <option value="Esthetic">Esthetic</option>
-                    </Form.Select>
-                    <Form.Select className='optionsServ' aria-label="Default select example" value={priceF} onChange={handlepriceFChange}>
-                        <option value="">All Prices</option>
-                        <option value="175$">175$</option>
-                        <option value="130$">130$</option>
-                        <option value="100$">100$</option>
-                    </Form.Select>
-                    <Form.Select className='optionsServ' aria-label="Default select example" value={timeF} onChange={handletimeFChange}>
-                        <option value="">All Times</option>
-                        <option value="40 minutes">40 minutes</option>
-                        <option value="50 minutes">50 minutes</option>
-                        <option value="60 minutes">60 minutes</option>
-                        <option value="75 minutes">75 minutes</option>
-                    </Form.Select>
+            <h1 className='titlePages' style={{marginBottom: '150px'}}>Services</h1>
+            <Row>
+                <Col className='border-end' md={3}>
+                    <div><h3>Filter</h3></div>
+                    <Facets_container facets={state.facets} updateCategory={updateCategory} clearAllFacetValues={clearAllFacetValues} />
+                </Col>
+                <Col xs={9}>
+                    <Container className='d-flex flex-wrap'>
+                        {state.shown_services.map(x => <TypeServ {...x} />)}
+                    </Container>
+                </Col>
+            </Row>
+        </div>
+    );
 
-                    </div>
-                    <div style={{marginLeft: '220px'}}>
-                        <Container>
-                            <div>
-                                <h1>Beauty Treatment</h1>
-                            </div>
-                            {serviceFilt.map((item, index) => (
-                                <Row> 
-                                        <Col>
-                                            <h2 style={{display: 'none'}}> {item.type}</h2>
-                                            <div style={{border: '2px solid #5D4F85', width: '200px', height: '280px', paddingTop: '10px', paddingBottom: '10px', marginTop: '60px', marginBottom: '60px'}} key={index}>
-                                                    {item.name}
-                                                    <br />
-                                                    {item.price}
-                                                    <br />
-                                                    {item.time}
-                                                    <br />
-                                                    <Button style={{marginTop: '20px', width: '150px'}} variant="primary">See more details</Button>
-                                            </div>
-                                        </Col>
-                                </Row>
-                            ))}
-                        </Container> 
-                    </div>
-                    <Card style={{ width: '300px', height: '500px' }}>
-                        <img src={imageExpert1} style={{ width: '300px' }} alt='imgAbout' className='img-fluid'/>
-                        <Card.Body>
-                            <Card.Title>Himalayan Salt Treatment</Card.Title>
-                            <Card.Text style={{ marginTop: '20px' }}>
-                                75 minutes
-                            </Card.Text>
-                            <Card.Text>
-                                175$
-                            </Card.Text>
-                            <Button 
-                                variant="primary" 
-                                style={{ width: '150px'}}
-                                onClick={() => setOpen(!open)}
-                                aria-controls="example-collapse-text"
-                                aria-expanded={open}
-                            >
-                                See more details
-                            </Button>
-                            <div style={{ minHeight: '150px', marginTop:'60px'}}>
-                                <Collapse in={open} dimension="width">
-                                <div id="example-collapse-text">
-                                    <Card body style={{ width: '300px' }}>
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                                    accusamus terry richardson ad squid. Nihil anim keffiyeh
-                                    helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                    ea proident.
-                                    </Card>
-                                </div>
-                                </Collapse>
-                            </div>
-                        </Card.Body>
-                    </Card>
-                </div>
-            </div>
-      );
-    
+
 }
+
 export default Services;

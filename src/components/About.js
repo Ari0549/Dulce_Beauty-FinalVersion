@@ -190,9 +190,9 @@ function About() {
                 </div>
 
                 <div>
-                    <h1 className='titlePages4' style={{marginTop: '150px'}}>FAQ</h1>
+                    <h1 className='titlePages2' style={{marginTop: '150px', marginBottom:'120px'}}>FAQ</h1>
                     <Accordion defaultActiveKey="0">
-                        <Accordion.Item style={{width: '875px', display: 'inline-block'}} eventKey="1">
+                        <Accordion.Item style={{width: '900px', display: 'inline-block'}} eventKey="1">
                             <Accordion.Header>Accordion Item #1</Accordion.Header>
                             <Accordion.Body>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -204,7 +204,7 @@ function About() {
                             culpa qui officia deserunt mollit anim id est laborum.
                             </Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item style={{width: '875px', display: 'inline-block'}} eventKey="2">
+                        <Accordion.Item style={{width: '900px', display: 'inline-block'}} eventKey="2">
                             <Accordion.Header>Accordion Item #2</Accordion.Header>
                             <Accordion.Body>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -216,7 +216,7 @@ function About() {
                             culpa qui officia deserunt mollit anim id est laborum.
                             </Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item style={{width: '875px', display: 'inline-block'}} eventKey="3">
+                        <Accordion.Item style={{width: '900px', display: 'inline-block'}} eventKey="3">
                             <Accordion.Header>Accordion Item #3</Accordion.Header>
                             <Accordion.Body>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
