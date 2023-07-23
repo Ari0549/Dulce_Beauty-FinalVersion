@@ -23,7 +23,7 @@ function NavBar(props) {
 
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Selected language
+      Select the language
     </Tooltip>
   );
   const { t, i18n } = useTranslation();
