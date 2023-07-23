@@ -60,7 +60,7 @@ function About() {
                         <p>{t('about_text3')}</p>
                     </div>
                     <div className='aboutImg1'>
-                        <img src={imageAbout} alt='imgAbout' className='img-fluid'/>
+                        <img src={imageAbout} alt='Image next to description of our clinic' className='img-fluid'/>
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@ function About() {
                     <Carousel className='experts'>
                         <Carousel.Item>
                             <div className='expertsImg'>
-                                <img src={imageExpert1} alt='imgAbout' className='img-fluid'/>
+                                <img src={imageExpert1} alt='Image of Facial Treatment Expert' className='img-fluid'/>
                             </div>
                             <h2>John Doe</h2>
                             <h3>{t('about_facial')}</h3>
@@ -90,7 +90,7 @@ function About() {
                         </Carousel.Item>
                         <Carousel.Item>
                             <div className='expertsImg'>
-                                <img src={imageExpert2} alt='imgAbout' className='img-fluid'/>
+                                <img src={imageExpert2} alt='Image of Body Treatment Expert' className='img-fluid'/>
                             </div>
                             <h2>Jane Doe</h2>
                             <h3>{t('about_body')}</h3>
@@ -110,7 +110,7 @@ function About() {
                         </Carousel.Item>
                         <Carousel.Item>
                             <div className='expertsImg'>
-                                <img src={imageExpert3} alt='imgAbout' className='img-fluid'/>
+                                <img src={imageExpert3} alt='Image of Esthetic Expert' className='img-fluid'/>
                             </div>
                             <h2>Sofia Hayes</h2>
                             <h3>{t('about_esthetic')}</h3>

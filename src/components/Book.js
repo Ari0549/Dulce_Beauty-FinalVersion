@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { MultiStepProgressBar } from "./MultiStepProgressBar";
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useState } from 'react';
-import { PersonalInfo } from './PersonalInfo';
+import { InfoBook } from './InfoBook';
 import { MultiStepForm } from './MultiStepForm';
 import Alert from 'react-bootstrap/Alert';
 
 function Book(){
     const[index, setIndex] = useState(1);
-    const totalPagesCount = PersonalInfo.length;
     const [pagesAnswers, setPagesAnswers] = useState({});
 
     const onPagesAnswerUpdate = (step, answersObj) => {
@@ -48,7 +47,7 @@ function Book(){
                         <div hidden = {(index === 1) || (index === 3)}>
                             <h3 className='titreInstruct2'>Select the expert, service, date and time of your appointment</h3>
                         </div>
-                        <MultiStepForm step={index} list = {PersonalInfo} onPageUpdate={onPagesAnswerUpdate} pagesAnswers={pagesAnswers}/>
+                        <MultiStepForm step={index} list = {InfoBook} onPageUpdate={onPagesAnswerUpdate} pagesAnswers={pagesAnswers}/>
                         <div hidden = {(index === 1) || (index === 3)}>
                             <Alert className='alerteSub' variant="warning" onClose={() => setShow(true)} dismissible>
                                 <p>

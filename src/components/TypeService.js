@@ -6,13 +6,13 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Collapse from 'react-bootstrap/Collapse';
 
-function TypeService ({ name, price, category, time, image, imge, moreInfo, video, id}) {
+function TypeService ({ name, price, category, time, image, moreInfo, video, id}) {
 
     const [open, setOpen] = useState(false)
     console.log(image)
     return (
         <Card className='m-2' style={{ width: '20rem'}}>
-            <Card.Img style={{maxHeight: '13rem'}} variant="top" src={require('../imagesServices/' + image)}/>
+            <Card.Img style={{maxHeight: '13rem'}} alt='Image of the type of service' variant="top" src={require('../imagesServices/' + image)}/>
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>

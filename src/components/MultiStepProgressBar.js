@@ -11,6 +11,7 @@ export const MultiStepProgressBar = (props) => {
         >
             <Step transition="scale">
             {({ accomplished, index}) => (
+
                 <div className={`step ${accomplished ? "completed" : ""}`}>
                     1
                 </div>
@@ -18,6 +19,7 @@ export const MultiStepProgressBar = (props) => {
             </Step>
             <Step transition="scale">
             {({ accomplished, index}) => (
+
                 <div className={`step ${accomplished ? "completed" : ""}`}>
                     2
                 </div>
@@ -25,6 +27,7 @@ export const MultiStepProgressBar = (props) => {
             </Step>
             <Step transition="scale">
             {({ accomplished, index}) => (
+                
                 <div className={`step ${accomplished ? "completed" : ""}`}>
                     3
                 </div>

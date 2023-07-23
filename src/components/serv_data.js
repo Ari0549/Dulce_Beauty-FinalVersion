@@ -1,6 +1,5 @@
-import PropTypes from "prop-types";
 
-export const data = [
+export const dataServ = [
     {
         "id": 1,
         "image": "himalayan_Salt.png",

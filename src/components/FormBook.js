@@ -21,11 +21,12 @@ import { BsQuestionCircle } from 'react-icons/bs';
 import Col from 'react-bootstrap/esm/Col';
 import { Tooltip } from 'react-tooltip';
 
-export const FormItem = ({ item, onChange, answer, nextStep }) => {
+export const FormBook = ({ item, onChange, answer, nextStep }) => {
     const [currentValue, setCurrentValue] = useState(answer || null);
-    //const [startDate, setStartDate] = useState(new Date());
+
     const [date, setDate] = useState(new Date());
     const[index, setIndex] = useState(1);
+    
     const phoneRegExp = /^([0-9]{10})?$/
 
     const nextButton = () => {
@@ -212,7 +213,7 @@ export const FormItem = ({ item, onChange, answer, nextStep }) => {
                                             <h1>{item.label}</h1>
                                             <h1 style={{
                                                 marginTop: '30px',
-                                            }}>A confirmation of your reservation has been sent to you by email.</h1>
+                                            }}>A confirmation of your reservation and a form to fill out have been sent to you by email.</h1>
                                             <Nav className='buttonHome'>
                                                 <Nav.Link as={Link} to={"/home"}>
                                                 <Button bsStyle="primary" style={{

@@ -1,5 +1,5 @@
 import { Form } from 'react-bootstrap';
-import { FormItem } from './FormItem';
+import { FormBook } from './FormBook';
 import { useState, useEffect } from 'react';
 
 export const MultiStepForm = (props) => {
@@ -7,6 +7,7 @@ export const MultiStepForm = (props) => {
 
     useEffect(() =>{
         if(Object.keys(answers).length > 1){
+
             props.onPageUpdate(answers.index, answers);
             setAnswers({ index: props.step})
         }
@@ -15,6 +16,7 @@ export const MultiStepForm = (props) => {
         }
     }, [props.step])
     const updateAnswers = (value, category) => {
+        
         setAnswers({...answers, [category] : value})
     }
     return(
@@ -23,7 +25,7 @@ export const MultiStepForm = (props) => {
                 props.list[props.step - 1].items?.map((item, index) => {
                     return(
                         
-                        <FormItem key={item.label} item={item} onChange={updateAnswers} answer={props.pagesAnswers[props.step] ? props.pagesAnswers[props.step][item.value] : null}/>
+                        <FormBook key={item.label} item={item} onChange={updateAnswers} answer={props.pagesAnswers[props.step] ? props.pagesAnswers[props.step][item.value] : null}/>
                     )
                 })
             }

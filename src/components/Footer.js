@@ -41,8 +41,8 @@ const Footer = () => {
                     {t('footer_6')}
                     </p>
 
-                    <img src={insta} style={{ marginTop:'20px', marginLeft: '200px', width: '60px', height: '60px'}}className='img-fluid'/>
-                    <img src={face} style={{ marginTop:'20px', marginLeft: '20px', width: '60px', height: '60px'}}className='img-fluid'/>
+                    <img src={insta} alt='Image of instagram logo' style={{ marginTop:'20px', marginLeft: '200px', width: '60px', height: '60px'}}className='img-fluid'/>
+                    <img src={face} alt='Image of facebook logo' style={{ marginTop:'20px', marginLeft: '20px', width: '60px', height: '60px'}}className='img-fluid'/>
                 </div>
             </Container>
         </div>

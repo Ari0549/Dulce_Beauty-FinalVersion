@@ -22,7 +22,7 @@ function Home() {
         <div>
             <Container>
                 <figure className='position-relative'>
-                    <img src={homeImge} alt='homeImg' className='img-fluid'/>
+                    <img src={homeImge} alt='Image on home page' className='img-fluid'/>
                     <figcaption>
                         <div className='text1'>
                             {t('home_title')}

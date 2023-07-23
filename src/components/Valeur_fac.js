@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 
-function Facet_value({name, updateCategory, facet}) {
+function Valeur_fac({name, updateCategory, facet}) {
 
-    //State of the checkbox
     const [selected, setSelected] = useState(false)
 
-    // Changes the state of selected on click
     const handleChange = () => {
         setSelected(!selected)
     }
 
-    // Update the state in Services.js when the variable selected changes.
     useEffect(() => {
         updateCategory(facet, name, selected)
     }, [selected])
@@ -25,4 +22,4 @@ function Facet_value({name, updateCategory, facet}) {
     );
 }
 
-export default Facet_value;
+export default Valeur_fac;

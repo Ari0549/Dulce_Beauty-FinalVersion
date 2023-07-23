@@ -2,21 +2,21 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; 
-import { data } from "./serv_data";
+import { dataServ } from "./serv_data";
 import TypeServ from "./TypeService";
 import Facets_container from './Facets_container';
 
 function Services(){
 
     const build_categorical_facet_values = (name) => {
-        const values = [... new Set(data.map(item => item[name]))]
+        const values = [... new Set(dataServ.map(item => item[name]))]
         return values.map(value => ({ 'name': value, 'checked': false }))
     }
 
     const [state, setState] = useState({
 
-        all_services: data,
-        shown_services: data,
+        all_services: dataServ,
+        shown_services: dataServ,
         facets: {
 
             category: build_categorical_facet_values('category'),

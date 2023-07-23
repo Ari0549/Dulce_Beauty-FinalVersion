@@ -1,6 +1,6 @@
 import { Placeholder } from "react-bootstrap";
 
-export const PersonalInfo = [
+export const InfoBook = [
     {
         section: 1,
         items: [
