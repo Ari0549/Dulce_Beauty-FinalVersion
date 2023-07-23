@@ -28,6 +28,18 @@
         "about_addReviews": "AJOUTER UN COMMENTAIRE",
         "about_name": "Nom",
         "about_comment": "Laisser un commentaire ici",
-        "about_submit": "Soumettre"
+        "about_submit": "Soumettre",
+        "about_quest1": "Quel est l'âge minimum requis pour accéder aux services ?",
+        "about_quest1_ans": "L'âge minimum requis pour accéder aux services offerts par notre clinique est de 15 ans.",
+        "about_quest2": "Est-il possible de prendre plusieurs rendez-vous dans la même journée ?",
+        "about_quest2_ans": "Oui, à notre clinique, si vous souhaitez prendre plusieurs rendez-vous pour plusieurs services dans une même journée, il est possible de le faire. La procédure à suivre est de cliquer sur le bouton Réserver présent dans le menu pour prendre rendez-vous pour chacune des prestations que vous souhaitez. Tous les rendez-vous nécessitent les mêmes étapes à suivre.",
+        "about_quest3": "Y a-t-il un formulaire à remplir avant de recevoir un traitement et où puis-je le trouver ?",
+        "about_quest3_ans": "Après avoir pris rendez-vous avec notre clinique, vous recevrez un courriel avec un formulaire à remplir. Ce formulaire contiendra des questions sur les allergies, les effets secondaires possibles selon le service que vous avez choisi, et plus de détails à ce sujet.",
+        "about_r1": "Bonne expérience",
+        "about_r2": "Je reviens certainement ici!",
+        "about_r3": "J'adore cette clinique!",
+        "about_rev1": "Je suis venue avec ma fille à la clinique Dulce Beauty. Nous avons remarqué que la clinique est très propre. On nous a demandé d'enlever nos chaussures et de porter les pantoufles qu'ils fournissent aux clients, ce qui démontre que la propreté est une priorité dans cette clinique. J'envisage d'y retourner avec ma fille.",
+        "about_rev2": "Le personnel est très amical. Ils privilégient le confort de leurs clients. Lorsque nous étions dans la salle d'attente pour être appelés, ils nous demandaient si nous voulions quelque chose à boire ou à manger en attendant que l'expert nous appelle. Au plaisir de revenir.",
+        "about_rev3": "J'ai remarqué que les experts s'assurent toujours d'expliquer les étapes des traitements, nous demandent toujours si nous sommes confortables et s'assurent que rien ne fait mal. J'y suis allé plusieurs fois et j'ai remarqué que chacun des experts avait cette habitude. Je recommande fortement la clinique Dulce Beauty."
     }
 }

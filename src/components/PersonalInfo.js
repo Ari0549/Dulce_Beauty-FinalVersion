@@ -8,12 +8,12 @@ export const PersonalInfo = [
             {
                 label: 'First name',
                 type: 'first',
-                value: 'first',
+                value: 'firstName',
             },
             {
                 label: 'Last name',
                 type: 'last',
-                value: 'last',
+                value: 'lastName',
             },
             {
                 label: 'Email address',
@@ -22,7 +22,7 @@ export const PersonalInfo = [
             },
             {
                 label: 'Phone number',
-                type: 'phone',
+                type: 'number',
                 value: 'phone',
             }
         ]
@@ -45,9 +45,10 @@ export const PersonalInfo = [
                 value: 'service',
             },
             {
-                label: 'Date and time',
+                label: 'Date',
                 type: 'pickDate',
                 value: 'date',
+                errorMessage: ""
             },
             {
                 label: 'Time',

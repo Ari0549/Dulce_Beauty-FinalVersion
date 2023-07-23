@@ -5,15 +5,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Collapse from 'react-bootstrap/Collapse';
-import foot from '../imagesServices/foot_before_after.jpeg';
 
-function TypeService ({ name, price, category, time, time2, time3, imfoot, image, moreInfo, id}) {
+function TypeService ({ name, price, category, time, image, imge, moreInfo, video, id}) {
 
     const [open, setOpen] = useState(false)
     console.log(image)
     return (
-        <Card className='m-2' style={{ width: '20rem' }}>
-            <Card.Img variant="top" src={require('../imagesServices/' + image)}/>
+        <Card className='m-2' style={{ width: '20rem'}}>
+            <Card.Img style={{maxHeight: '13rem'}} variant="top" src={require('../imagesServices/' + image)}/>
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>
@@ -38,10 +37,13 @@ function TypeService ({ name, price, category, time, time2, time3, imfoot, image
                     See more details
                 </Button>
                 <div style={{ minHeight: '150px', marginTop:'60px'}}>
-                    <Collapse in={open} dimension="width">
+                    <Collapse  className='more' in={open} dimension="width">
                         <div id="example-collapse-text9">
                             <Card body style={{ width: '300px'}}>
                                 {moreInfo}
+                                <br />
+                                <br />
+                                {video}
                             </Card>
                         </div>
                     </Collapse>

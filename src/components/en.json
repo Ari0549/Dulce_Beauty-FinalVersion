@@ -28,6 +28,19 @@
         "about_addReviews": "ADD A REVIEW",
         "about_name": "Name",
         "about_comment": "Leave a review here",
-        "about_submit": "Submit"
+        "about_submit": "Submit",
+        "about_quest1": "What is the minimum age required to access the services?",
+        "about_quest1_ans": "The minimum age required to access the services that our clinic offers is 15 years old.",
+        "about_quest2": "Is it possible to make several appointments in the same day?",
+        "about_quest2_ans": "Yes, at our clinic, if you want to book multiple appointments for multiple services in one day, it is possible to do so. The procedure to follow is to click on the Book button present in the menu to make an appointment for each of the services you want. All appointments require the same steps to be followed.",
+        "about_quest3": "Is there a form to fill out before receiving treatment and where can I find it?",
+        "about_quest3_ans": "After booking an appointment with our clinic, you will receive an email with a form to fill out. This form will contain questions about allergies, possible side effects depending on the service you have chosen, and more details about it.",
+        "about_r1": "Good experience",
+        "about_r2": "I'm definitely coming back here!",
+        "about_r3": "Love this clinic!",
+        "about_rev1": "I came with my daughter to the Dulce Beauty clinic. We noticed that the clinic is very clean. We were asked to take off our shoes and wear the slippers they provide to clients which demonstrates the fact that cleanliness is a priority at this clinic. I am considering going back again with my daughter.",
+        "about_rev2": "The staff is very friendly. They prioritize the comfort of their clients. When we are in the waiting room to be called, they would ask if we wanted anything to drink or to eat while we wait for the expert to call us. Looking forward to coming back.",
+        "about_rev3": "I've noticed that the experts always make sure to explain the steps of the treatments, always ask us if we're comfortable, and make sure nothing hurts. I have been there several times and noticed that each of the experts has this habit. I highly recommend Dulce Beauty Clinic."
+        
     }
 }

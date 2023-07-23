@@ -136,30 +136,16 @@ function About() {
                     <h1 className='titlePages3'>{t('about_reviews')}</h1>
                     <Carousel className='CarouselReviews'>
                         <Carousel.Item>
-                            <h3>Love this clinic!</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>{t('about_r1')}</h3>
+                            <p> {t('about_rev1')}</p>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <h3>Definitly going back here</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>{t('about_r2')}</h3>
+                            <p>{t('about_rev2')}</p>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <h3>Good experience</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <h3>Good experience</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <h3>Good experience</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
+                            <h3>{t('about_r3')}</h3>
+                            <p>{t('about_rev3')}</p>
                         </Carousel.Item>
                     </Carousel>
                 </div>
@@ -193,39 +179,21 @@ function About() {
                     <h1 className='titlePages2' style={{marginTop: '150px', marginBottom:'120px'}}>FAQ</h1>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item style={{width: '900px', display: 'inline-block'}} eventKey="1">
-                            <Accordion.Header>Accordion Item #1</Accordion.Header>
+                            <Accordion.Header>{t('about_quest1')}</Accordion.Header>
                             <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
+                            {t('about_quest1_ans')}
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item style={{width: '900px', display: 'inline-block'}} eventKey="2">
-                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Header>{t('about_quest2')}</Accordion.Header>
                             <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
+                            {t('about_quest2_ans')}
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item style={{width: '900px', display: 'inline-block'}} eventKey="3">
-                            <Accordion.Header>Accordion Item #3</Accordion.Header>
+                            <Accordion.Header>{t('about_quest3')}</Accordion.Header>
                             <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
+                            {t('about_quest3_ans')}
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
